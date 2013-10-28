@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SipHome" >
+	
+	 <RelativeLayout
+        android:id="@+id/topField"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginBottom="0dip"
+        android:layout_weight="@integer/dialpad_layout_weight_digits"
+        android:background="@drawable/dialpad_background"
+        android:orientation="horizontal"
+        android:padding="0dip" >
+        <com.jwzhangjie.pjsip.ui.dialpad.DigitsEditText
+            android:id="@+id/digitsText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/description_digits_edittext"
+            android:gravity="center"
+            android:imeActionLabel="@string/call"
+            android:imeOptions="actionGo"
+            android:nextFocusRight="@+id/accountChooserButton"
+            android:textAppearance="@style/DialtactsDigitsTextAppearance"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+    
+	<include layout="@layout/dialpad_compose" />
+</LinearLayout>
