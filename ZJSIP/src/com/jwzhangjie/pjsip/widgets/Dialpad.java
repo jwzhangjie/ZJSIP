@@ -36,11 +36,10 @@ public class Dialpad extends FrameLayout implements OnClickListener {
 		inflater.inflate(R.layout.dialpad, this, true);
 	}
 
-	// Here we need a map to quickly find if the clicked button id is in the map
-	// keys
+//	 Here we need a map to quickly find if the clicked button id is in the map
+//	 keys,之所以这里不用SparseArrays，因为下面取值的方便
 	@SuppressLint("UseSparseArrays")
 	private static final Map<Integer, int[]> DIGITS_BTNS = new HashMap<Integer, int[]>();
-
 	static {
 		DIGITS_BTNS.put(R.id.button0, new int[] { ToneGenerator.TONE_DTMF_0,
 				KeyEvent.KEYCODE_0 });
@@ -68,6 +67,9 @@ public class Dialpad extends FrameLayout implements OnClickListener {
 				KeyEvent.KEYCODE_STAR });
 	};
 
+	/**
+	 * SparseArray这个是android提供的，可以替换HashMap,来提高效率
+	 */
 	private static final SparseArray<String> DIGITS_NAMES = new SparseArray<String>();
 
 	static {

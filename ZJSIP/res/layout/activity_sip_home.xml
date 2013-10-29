@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FF000000"
     tools:context=".SipHome" >
 	
 	 <RelativeLayout
@@ -24,9 +23,10 @@
             android:gravity="center"
             android:imeActionLabel="@string/call"
             android:imeOptions="actionGo"
+            android:nextFocusRight="@+id/accountChooserButton"
             android:textAppearance="@style/DialtactsDigitsTextAppearance"
             android:textColor="@android:color/white" />
     </RelativeLayout>
     
-	<include layout="@layout/dialpad_compose" />
+	<include layout="@layout/dialpad_compose_3x5" />
 </LinearLayout>

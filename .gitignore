@@ -1,8 +1,8 @@
-bin/*
-gen/*
-libs/*
-obj/*
-assets/bin/*
-assets/index.txt
+ZJSIP/bin/*
+ZJSIP/gen/*
+ZJSIP/libs/*
+ZJSIP/obj/*
+ZJSIP/assets/bin/*
+ZJSIP/assets/index.txt
 
 local.properties
